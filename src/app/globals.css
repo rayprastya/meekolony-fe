@@ -1,0 +1,166 @@
+/* src/styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #141414;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1f1f1f;
+}
+
+.nav-links a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+}
+
+.search input {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.filter-buttons button {
+  border: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-buttons button:hover {
+  background-color: #3d3d3d;
+}
+
+.filter-buttons .bg-purple-500 {
+  background-color: #6c5ce7 !important; /* Purple for active */
+}
+
+.filter-buttons .bg-gray-700 {
+  background-color: #2c2c2c; /* Darker gray for inactive */
+}
+
+.user-card {
+  width: 300px; /* Set width for the card */
+  top: 20px; /* Adjust top position */
+  left: 20px; /* Adjust left position */
+}
+
+.user-card img {
+  width: 100%; /* Fit within the circle */
+  height: 100%; /* Fit within the circle */
+  border-radius: 50%; /* Make the image round */
+}
+
+.sol-balance {
+  color: #fff;
+  padding: 10px;
+}
+
+.listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px; /* Adjust the gap between cards */
+  padding: 20px;
+  max-width: 1200px; /* Adjust to fit your design */
+  margin: 0 auto;
+}
+
+.listing {
+  background-color: #2c2c2c;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 150px; /* Fixed width */
+  height: 210px; /* Fixed height */
+}
+
+.listing img {
+  width: 100%; /* Fit within the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px;
+}
+
+.listing .details {
+  margin-top: 8px; /* Reduce margin-top to fit content better */
+}
+
+/* Modal container */
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+/* Tabs styling */
+.modal-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.modal-tab {
+  cursor: pointer;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.modal-tab.active {
+  border-bottom: 2px solid #3498db;
+}
+
+/* Section display */
+.section {
+  display: none;
+}
+
+.section.active {
+  display: block;
+}
